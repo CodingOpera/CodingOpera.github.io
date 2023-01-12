@@ -1,7 +1,5 @@
-
-
 # DeepLearning Pytorch linear function tutorial
-Hellow everyone 
+Hellow everyone this is "CodingOpera" and my name is "Master.M". Nice to meet you guys. Today I will show you how to use linear function DeepLearning frame work in pytorch. The subject is the correlation between salary and career.  
 
 ```python
 import torch
@@ -11,6 +9,7 @@ import matplotlib.pyplot as plt
 
 from tqdm import tqdm
 ```
+First of all, we have to import some class packages. Before this work, you should download class packages using by "pip"method (e.g. "pip install torch"). If you want to more about this, please refer to this site (https://pypi.org/project/torch/). 
 
 
 ```python
@@ -20,6 +19,7 @@ y = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 x = torch.tensor(x).unsqueeze(dim=1).float()
 y = torch.tensor(y).unsqueeze(dim=1).float()
 ```
+For this tutorial, we need some data. The "x"dataset is meaning of "career" and "y"dataset is a "salary". And we have to make "tensor" type of data. The "tensor"is a type of data, like box. The AI engine (pytorch, tensorflow etc) need to this "tensor" type data, for the training. So we change the data type, using by "torch.tensor()".  
 
 
 ```python
