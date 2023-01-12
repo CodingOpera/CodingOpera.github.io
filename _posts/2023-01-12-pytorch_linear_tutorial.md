@@ -75,6 +75,10 @@ for step in tqdm(range(10000)):
 Finally we can train our model. The train process is like this.
 - model(input): The prediction value of the model. If you put into the input value, the model output the value. This output value is meaning of a model's prediction value.
 - criterion(input=prediction, target=y): It is meaning of the loss. This critertion calculate the difference between prediction and target(real) value.
+- optimizer.zero_grad(): Initialize the gradient in optimizer. Because whenever do the backward() process, the gradient is add.
+- loss.backward(): Back propagation the loss.
+- optimizer.step(): Adjust the parameters by the gradients collected in the backward pass.
+
 
     100%|███████████████████████████████████| 10000/10000 [00:02<00:00, 3886.43it/s]
     
@@ -85,6 +89,7 @@ test_x = [1+i*0.01 for i in range(900)]
 test_x = torch.tensor(test_x).unsqueeze(dim=1).float()
 test_y = model(test_x).detach()
 ```
+To test our model's performance, we make the test dataset. The test dataset is the number that is 0.01 intervals from 1 to 10.  Put in the dataset to trained model and get the output dataset. 
 
 
 ```python
@@ -96,13 +101,12 @@ plt.scatter(test_x, test_y, s=0.1, c='r')
 plt.legend(('data', 'prediction'))
 plt.show()
 ```
-
-
     
 ![png](output_6_0.png)
     
+Finally, we get the result graph. The blue spot is a real data and the red spot is a prediction data. As you can see, the  prediction is very well.       
 
-
+Today we studied Linear function Deep Learning. If you have ant question about this, please reply on this post. Next time I'll post the details about Deep Learning. See you guys! 
 
 ```python
 
