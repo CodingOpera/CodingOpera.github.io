@@ -49,6 +49,7 @@ The AI module has three main things that are model, loss and optimizer. In this 
 - loss: The difference between prediction and real data. Most of AI models are trained to reduce the loss.
 - optimizer: The way to reduce a loss. It also has many algorithm like Adam, SGD, Adagrad. 
 
+
     tensor([[-0.4567],
             [-0.2023],
             [ 0.0521],
