@@ -33,6 +33,7 @@ plt.show()
 
     
 ![png](output_2_0.png)
+
 This graph is showing our data set. When career is 1, the salary is also 1. And we already know the salary when career is 1, 2, 3 ... But what if the career is 2.5? In this case we don't know about actual salary, because we don't have this case of data. Instate of this, we can try to estimate the salary when career is 2.5. This concept is the powerful reason why we using the AI.
 
 
@@ -43,6 +44,10 @@ criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01)
 print(model(x))
 ```
+The AI module has three main things that are model, loss and optimizer. In this post, I'll explain it briefly now. And detail one is posting later.
+- model: It is most important thing as the type of AI. This have many type of model like Linear, RNN, LSTM etc. Most of AI engineers update this part.
+- loss: The difference between prediction and real data. Most of AI models are trained to reduce the loss.
+- optimizer: The way to reduce a loss. It also has many algorithm like Adam, SGD, Adagrad. 
 
     tensor([[-0.4567],
             [-0.2023],
