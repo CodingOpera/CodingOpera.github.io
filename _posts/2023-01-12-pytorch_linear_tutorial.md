@@ -72,6 +72,9 @@ for step in tqdm(range(10000)):
     loss.backward()
     optimizer.step()
 ```
+Finally we can train our model. The train process is like this.
+- model(input): The prediction value of the model. If you put into the input value, the model output the value. This output value is meaning of a model's prediction value.
+- criterion(input=prediction, target=y): It is meaning of the loss. This critertion calculate the difference between prediction and target(real) value.
 
     100%|███████████████████████████████████| 10000/10000 [00:02<00:00, 3886.43it/s]
     
