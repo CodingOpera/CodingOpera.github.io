@@ -44,12 +44,6 @@ criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(params=model.parameters(), lr=0.01)
 print(model(x))
 ```
-The AI module has three main things that are model, loss and optimizer. In this post, I'll explain it briefly now. And detail one is posting later.
-- model: It is most important thing as the type of AI. This have many type of model like Linear, RNN, LSTM etc. Most of AI engineers update this part.
-- loss: The difference between prediction and real data. Most of AI models are trained to reduce the loss.
-- optimizer: The way to reduce a loss. It also has many algorithm like Adam, SGD, Adagrad.
-
-```
     tensor([[-0.4567],
             [-0.2023],
             [ 0.0521],
@@ -60,7 +54,11 @@ The AI module has three main things that are model, loss and optimizer. In this 
             [ 1.3242],
             [ 1.5786],
             [ 1.8330]], grad_fn=<AddmmBackward>)
-```    
+            
+The AI module has three main things that are model, loss and optimizer. In this post, I'll explain it briefly now. And detail one is posting later.
+- model: It is most important thing as the type of AI. This have many type of model like Linear, RNN, LSTM etc. Most of AI engineers update this part.
+- loss: The difference between prediction and real data. Most of AI models are trained to reduce the loss.
+- optimizer: The way to reduce a loss. It also has many algorithm like Adam, SGD, Adagrad.
 
 
 ```python
@@ -73,15 +71,13 @@ for step in tqdm(range(10000)):
     optimizer.step()
 ```
 Finally we can train our model. The train process is like this.
+    100%|███████████████████████████████████| 10000/10000 [00:02<00:00, 3886.43it/s]
+    
 - model(input): The prediction value of the model. If you put into the input value, the model output the value. This output value is meaning of a model's prediction value.
 - criterion(input=prediction, target=y): It is meaning of the loss. This critertion calculate the difference between prediction and target(real) value.
 - optimizer.zero_grad(): Initialize the gradient in optimizer. Because whenever do the backward() process, the gradient is add.
 - loss.backward(): Back propagation the loss.
 - optimizer.step(): Adjust the parameters by the gradients collected in the backward pass.
-
-
-    100%|███████████████████████████████████| 10000/10000 [00:02<00:00, 3886.43it/s]
-    
 
 
 ```python
