@@ -32,7 +32,7 @@ plt.show()
 
 
     
-![png](output_2_0.png)
+![](output_2_0.png)
 
 This graph is showing our data set. When career is 1, the salary is also 1. And we already know the salary when career is 1, 2, 3 ... But what if the career is 2.5? In this case we don't know about actual salary, because we don't have this case of data. Instate of this, we can try to estimate the salary when career is 2.5. This concept is the powerful reason why we using the AI.
 
