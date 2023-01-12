@@ -108,6 +108,3 @@ Finally, we get the result graph. The blue spot is a real data and the red spot 
 
 Today we studied Linear function Deep Learning. If you have ant question about this, please reply on this post. Next time I'll post the details about Deep Learning. See you guys! 
 
-```python
-
-```
