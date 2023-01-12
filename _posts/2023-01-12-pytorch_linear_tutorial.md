@@ -47,9 +47,9 @@ print(model(x))
 The AI module has three main things that are model, loss and optimizer. In this post, I'll explain it briefly now. And detail one is posting later.
 - model: It is most important thing as the type of AI. This have many type of model like Linear, RNN, LSTM etc. Most of AI engineers update this part.
 - loss: The difference between prediction and real data. Most of AI models are trained to reduce the loss.
-- optimizer: The way to reduce a loss. It also has many algorithm like Adam, SGD, Adagrad.| 
+- optimizer: The way to reduce a loss. It also has many algorithm like Adam, SGD, Adagrad.
 
-
+```
     tensor([[-0.4567],
             [-0.2023],
             [ 0.0521],
@@ -60,7 +60,7 @@ The AI module has three main things that are model, loss and optimizer. In this 
             [ 1.3242],
             [ 1.5786],
             [ 1.8330]], grad_fn=<AddmmBackward>)
-    
+```    
 
 
 ```python
