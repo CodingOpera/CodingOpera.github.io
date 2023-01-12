@@ -1,10 +1,7 @@
----
-layout: post
-title: "My first posting"
----
 
-# Today I post my first posting
-It is so exceting.
+
+# DeepLearning Pytorch linear function tutorial
+Hellow everyone 
 
 ```python
 import torch
